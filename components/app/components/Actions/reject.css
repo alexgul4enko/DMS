@@ -1,0 +1,35 @@
+.Dialog.reject {
+	width: 100%;
+}
+
+
+
+
+.Dialog.reject .buttons{
+	width: 100%;
+	height:50px;
+}
+
+.Dialog.reject .buttons .material-icons{
+	width: 50%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+
+.Dialog.reject .buttons .material-icons.check{
+	background:#009688;
+}
+
+
+.Dialog.reject .buttons .material-icons.reject{
+	background:#f44336;
+}
+
+.theme__body___1_nNM {
+	padding: 0px !important;
+}
+

@@ -1,0 +1,50 @@
+.Preload {
+	width: 100%;
+	height: 100%;
+	background: #556167;
+	
+}
+
+.Preload .Buttons {
+	padding-top:5px;
+}
+
+.Preload .Buttons .buts {
+	text-align: center;
+	padding: 15px 0px;
+	background: #232627;
+	color: white;
+	margin-bottom: 2px;
+}
+
+
+.Preload .Buttons .buts.goApp {
+	color: #556167;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 750px) {
+	.Preload .Buttons .buts {
+		padding: 20px 0px;
+		margin-bottom: 5px;
+	}
+}
+
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.Preload .Buttons .buts {
+		padding: 25px 0px;
+		margin-bottom: 5px;
+	}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+	.Preload .Buttons .buts {
+		padding: 25px 0px;
+		margin-bottom: 5px;
+	}
+}

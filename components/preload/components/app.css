@@ -1,0 +1,117 @@
+body, html {
+	height: 100%;
+	
+}
+
+body{
+	position: relative;
+	margin:0;
+	padding: 0;
+	font-family: 'open_sanslight';
+}
+
+#app, #preload{
+	width: 100%;
+	height: 100%;
+}
+
+#menu .full_screen{
+	height: 30px;
+	display: flex;
+    flex-direction: row;
+    margin-top:10px;
+     margin-right:10px;
+
+}
+
+
+#menu .log_out{
+	height: 30px;
+	display: flex;
+    flex-direction: row;
+    margin-left:10px;
+    margin-top:10px;
+
+}
+
+
+#buttons{
+	height: calc( 100% - 50px );
+	width: 100%;
+	background: #5c6a70;
+}
+
+#center {
+	position:absolute;
+    width:100%;
+    top:50%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%); /* Для Firefox */
+    -ms-transform: translateY(-50%); /* Для IE */
+    -webkit-transform: translateY(-50%); /* Для Safari, Chrome, iOS */
+    -o-transform: translateY(-50%); /* Для Opera */
+    
+}
+
+
+#center .clicks{
+	text-align: center;
+	width: 100%;
+	height: 30px;
+	background:#394246;
+	color:white;
+	line-height: 30px;
+	font-size: 18px;
+}
+
+#center #sync{
+	border-bottom: 2px solid white;
+}
+
+
+
+@media only screen 
+  and (min-device-width: 600px){
+      	#menu .full_screen{
+			height: 50px;
+		}
+		#menu .log_out{
+			height: 50px;
+		}
+		#buttons{
+			height: calc( 100% - 70px );
+		}
+		#center .clicks{
+			height: 50px;
+			line-height: 50px;
+			font-size: 25px;
+		}
+		#center #sync{
+			border-bottom: 4px solid white;
+		}
+      
+  }
+
+
+@media only screen 
+  and (min-device-width: 1000px){
+      #menu .full_screen{
+			height: 70px;
+		}
+		#menu .log_out{
+			height: 70px;
+		}
+		#buttons{
+			height: calc( 100% - 90px );
+		}
+		#center .clicks{
+			height: 70px;
+			line-height: 70px;
+			font-size: 30px;
+		}
+		#center #sync{
+			border-bottom: 6px solid white;
+		}
+      
+  }
+

@@ -1,0 +1,60 @@
+.hint_Marker.material-icons.green{
+    color:#1d8c1d;
+}
+
+
+.hint_Marker.material-icons.yelow{
+    color:yellow;
+}
+
+.hint_Marker.material-icons.red{
+    color:#da0a0a;
+}
+
+.hint_Marker.material-icons {
+    font-size: 25px;
+}
+
+.MArkerData .relat{
+    position: relative;
+    width: 150px;
+    /* height: 60px; */
+    background: #17475d!important;
+    padding: 5px;
+    transform: translate(-60px,-50px);
+    animation-name: dogs;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.MArkerData .relat .OUT {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    color: #e7fb00;
+}
+
+.MArkerData .relat .Map_row{
+    display: block;
+    max-width: 120px;
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+
+}
+
+.MArkerData .relat .Map_row.date {
+    padding-bottom: 2px;
+}
+
+
+
+@keyframes dogs {
+  0%   { height: 0px }
+  50%  { height: 60px}
+  75%   { height: 40px}
+  100% { height: initial}
+}

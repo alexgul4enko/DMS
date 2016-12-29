@@ -1,0 +1,146 @@
+.ProdList {
+	width: 100%;
+	height: 100%;
+}
+
+.ProdList .filters{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding:0px 10px;
+	justify-content: space-between;
+
+}
+
+
+.ProdList .OrdersFilter {
+	background: inherit;
+	border: 0;
+	border-bottom: 1px solid white;
+	padding-left: 10px;
+	color:white;
+	font-size: 30px;
+	padding-top:5px;
+	padding-bottom: 5px;
+	width: calc(100% - 100px);
+}
+
+.ProdList .material-icons{
+	color:white;
+	font-size: 50px;
+	padding: 0px 10px;
+}
+
+
+.ProdList .LIST{
+	width: 100%;
+	height: calc(100% - 50px - 42px);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+
+.ProdList .footer{
+	display: flex;
+	flex-direction: row;
+	color: white;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	padding:10px;
+	background: #1f2023;
+}
+
+
+
+
+
+
+
+@media screen and (min-device-width: 320px) and (max-device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+	.ProdList .OrdersFilter{
+		width: calc(100% - 100px);
+		font-size: 30px;
+	}
+	.ProdList .material-icons{
+		font-size: 50px;
+		padding: 0px 10px;
+	}
+	.ProdList .footer *{
+		font-size: 22px !important;
+	}
+	.ProdList .LIST{
+		height: calc(100% - 50px - 46px);
+	}
+
+}
+
+@media screen and (min-device-width: 400px) and (max-device-height: 750px) {
+	.ProdList .OrdersFilter{
+		width: calc(100% - 100px);
+		font-size: 30px;
+	}
+	.ProdList .material-icons{
+		font-size: 50px;
+		padding: 0px 10px;
+	}
+	.ProdList .footer{
+		font-size: 30px;
+	}
+	.ProdList .LIST{
+		height: calc(100% - 50px - 48px);
+	}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.ProdList .OrdersFilter{
+		width: calc(100% - 100px);
+		font-size: 40px;
+	}
+	.ProdList .material-icons{
+		font-size: 70px;
+		padding: 0px 10px;
+	}
+	.ProdList .footer{
+		padding:20px;
+	}
+	.ProdList .footer *{
+		font-size: 40px;
+	}
+	.ProdList .LIST{
+		height: calc(100% - 70px - 86px);
+	}
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+	.ProdList .OrdersFilter{
+		width: calc(100% - 100px);
+		font-size: 40px;
+	}
+	.ProdList .material-icons{
+		font-size: 70px;
+		padding: 0px 10px;
+	}
+	.ProdList .footer{
+		padding:20px;
+	}
+	.ProdList .footer *{
+		font-size: 40px;
+	}
+	.ProdList .LIST{
+		height: calc(100% - 70px - 86px);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,150 @@
+.stocks .filters{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding:0px 10px;
+	justify-content: space-between;
+
+}
+
+.stocks .OrdersFilter {
+	background: inherit;
+	border: 0;
+	border-bottom: 1px solid white;
+	padding-left: 10px;
+	color:white;
+	font-size: 30px;
+	padding-top:5px;
+	padding-bottom: 5px;
+	width: calc(100% - 100px);
+}
+
+.stocks  .material-icons{
+	color:white;
+	font-size: 50px;
+	padding: 0px 10px;
+}
+
+.stocks .stocklist{
+	width: 100%;
+	height: calc(100% - 50px);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.prodGroup .prodGroupTitle{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding: 5px 10px;
+	justify-content: space-between;
+	background: #2b2b2d;
+	border: 0;
+	border-bottom: 1px solid white;
+}
+
+.prodGroup .prodGroupTitle .title{
+	font-size: 1.2em;
+	color: white;
+	align-self: center;
+	padding-left: 10px;
+
+}
+
+
+
+
+
+.stocks-enter {
+  opacity: 0.01;
+}
+
+.stocks-enter.stocks-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+
+.stocks-leave {
+  opacity: 1;
+}
+
+.stocks-leave.products-leave-active {
+  opacity: 0.01;
+  transition: opacity w00ms ease-in;
+}
+
+
+.stocks-appear {
+  opacity: 0.01;
+}
+
+.stocks-appear.products-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+
+
+@media screen and (min-device-width: 320px) and (max-device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+	.stocks .OrdersFilter{
+		width: calc(100% - 100px);
+		font-size: 30px;
+	}
+	.stocks  .material-icons{
+		font-size: 50px;
+		padding: 0px 10px;
+	}
+
+	.stocks .stocklist{
+		height: calc(100% - 50px);
+	}
+
+}
+
+@media screen and (min-device-width: 400px) and (max-device-height: 750px) {
+	.stocks .OrdersFilter{
+		width: calc(100% - 100px);
+		font-size: 30px;
+	}
+	.stocks  .material-icons{
+		font-size: 50px;
+		padding: 0px 10px;
+	}
+
+	.stocks .stocklist{
+		height: calc(100% - 50px );
+	}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.stocks .OrdersFilter{
+		width: calc(100% - 100px);
+		font-size: 40px;
+	}
+	.stocks  .material-icons{
+		font-size: 70px;
+		padding: 0px 10px;
+	}
+
+	.stocks .stocklist{
+		height: calc(100% - 70px );
+	}
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+	.stocks .OrdersFilter{
+		width: calc(100% - 100px);
+		font-size: 40px;
+	}
+	.stocks  .material-icons{
+		font-size: 70px;
+		padding: 0px 10px;
+	}
+
+	.stocks .stocklist{
+		height: calc(100% - 70px);
+	}
+}

@@ -1,0 +1,39 @@
+.ActionComponent{
+	color:white;
+	width: calc(100% - 30px);
+	padding:  0.5rem 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+}
+
+.ActionComponent .material-icons{
+	font-size: 1.6em;
+	align-self: center;
+	text-align: center;
+	margin-right: 10px;
+	
+
+}
+
+.ActionComponent .material-icons.checked{
+	color: #4caf50;
+}
+
+.ActionComponent .question{
+	font-size: 1.1em;
+}
+
+.ERROR_DIALOG{
+	left:0 !important;
+	right: 0 !important;
+	padding: 1.4rem 1rem !important;
+	flex-direction: row;
+	text-align: center;
+}
+.ERROR_DIALOG button{
+	display: none;
+}
+
+

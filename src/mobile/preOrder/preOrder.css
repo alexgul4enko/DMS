@@ -1,0 +1,103 @@
+.NewOrderButton {
+	width: 100%;
+	padding: 10px 0px ;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	color: white;
+	background: black;
+
+}
+
+
+.NewOrderButton span{
+
+}
+
+.NewOrderButton .material-icons{
+	align-self: center;
+	font-size: 40px;
+	padding: 5px;
+}
+
+.NewOrderButton .S{
+	font-size: 1.3em;
+	text-align: center;
+	align-self: center;
+	width: calc(100% - 50px);
+}
+
+
+.OrdersRouteList {
+	width: 100%;
+	height: calc(100% - 70px);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+
+
+
+@media screen and (min-device-width: 320px) and (max-device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+	.NewOrderButton .material-icons{
+		font-size: 30px;
+		padding: 10px;
+	}
+	.NewOrderButton .S{
+		width: calc(100% - 50px);
+	}
+
+	.OrdersRouteList {
+		height: calc(100% - 70px);
+	}
+
+	
+
+}
+
+@media screen and (min-device-width: 400px) and (max-device-height: 750px) {
+	.NewOrderButton .material-icons{
+		font-size: 40px;
+		padding: 10px;
+	}
+	.NewOrderButton .S{
+		width: calc(100% - 60px);
+	}
+	.OrdersRouteList {
+		height: calc(100% - 80px);
+	}
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.NewOrderButton .material-icons{
+		font-size: 55px;
+		padding: 10px;
+	}
+	.NewOrderButton .S{
+		width: calc(100% - 75px);
+	}
+	.OrdersRouteList {
+		height: calc(100% - 95px);
+	}
+	
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+	.NewOrderButton .material-icons{
+		font-size: 55px;
+		padding: 10px;
+	}
+	.NewOrderButton .S{
+		width: calc(100% - 75px);
+	}
+	.OrdersRouteList {
+		height: calc(100% - 95px);
+	}
+	
+}
+
+
+

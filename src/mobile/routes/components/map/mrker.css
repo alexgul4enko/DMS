@@ -1,0 +1,96 @@
+.GPS_TRACKER    {
+    color: black;
+    padding:10px;
+    font-size: 2em;
+}
+
+.hint_Marker.material-icons.green{
+    color:#009688;
+}
+.hint_Marker.material-icons.grey{
+    color:#838386;
+}
+
+
+.hint_Marker.material-icons.yelow{
+    color:#ff9800;
+}
+
+.hint_Marker.material-icons.red{
+    color:#f44336;
+}
+
+.hint_Marker.material-icons {
+    font-size: 2em;
+}
+
+.MArkerData .relat{
+    position: relative;
+    width: 150px;
+    /* height: 60px; */
+    background: #394246!important;
+    padding: 5px;
+    transform: translate(-60px,-50px);
+}
+
+.MArkerData .relat .OUT {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    color: #e7fb00;
+    padding: 0px  0px 10px 10px;
+}
+
+.MArkerData .relat .Map_row{
+    display: block;
+    max-width: 120px;
+    color: white;
+    text-decoration: none;
+}
+
+.MArkerData .relat .Map_row.date {
+    padding-bottom: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .MArkerData .relat{
+        width: 400px;
+    }
+    .MArkerData .relat .Map_row{
+        max-width: 490px;
+    }
+    .MArkerData .relat .OUT {
+        font-size: 1.5em;
+        padding: 0px  0px 20px 20px;
+    }
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+    .MArkerData .relat{
+        width: 400px;
+    }
+    .MArkerData .relat .Map_row{
+        max-width: 490px;
+        text-align: center;
+    }
+    .MArkerData .relat .OUT {
+        font-size: 1.5em;
+        padding: 0px  0px 20px 20px;
+    }
+}

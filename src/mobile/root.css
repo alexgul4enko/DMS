@@ -1,0 +1,158 @@
+body, html {
+	height: 100%;
+	
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+body {
+	position: relative;
+	margin:0;
+	padding: 0;
+	
+}
+
+*{
+	font-family: 'Roboto';
+	font-size: 14px;
+}
+
+.BiServTabs {
+	color:white;
+}
+
+.appUnderTabls{
+	position: relative;
+}
+
+<<<<<<< HEAD
+
+.BiServTabs .theme__navigationContainer___rLpe4 > nav {
+	background: #394246;
+}
+
+.BiServTabs .theme__pointer___pWCM7{
+	background: white;
+}
+
+.BiServTabs .theme__navigationContainer___rLpe4 > nav  > label {
+	color:white !important;
+	padding:20px 0px !important;
+	font-size: 1em !important;
+	align-self: center;
+	width: 50%;
+	text-align: center;
+}
+
+
+.BiServTabs  > nav {
+=======
+
+.BiServTabs  nav {
+>>>>>>> full
+	background: #394246;
+}
+.BiServTabs > section {
+	padding: 0px !important;
+}
+
+
+
+
+.BiServTabs   > span{
+	background: white;
+}
+
+<<<<<<< HEAD
+.BiServTabs .theme__pointer___pWCM7{
+	background: white;
+}
+
+.BiServTabs  > nav  > label {
+=======
+.BiServTabs > div > nav > span{
+	background: white;
+}
+
+.BiServTabs .routeLabel {
+>>>>>>> full
+	color:white !important;
+	padding:20px 0px !important;
+	font-size: 1em !important;
+	align-self: center;
+	width: 50%;
+	text-align: center;
+}
+
+
+
+#app{
+	height: 100%;
+}
+
+#app .container {
+	height: 100%;
+}
+
+
+
+@media screen 
+  and (min-device-width: 360px) 
+  and (max-device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+	*{
+		font-size: 20px;
+	}
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) {
+	*{
+		font-size: 16px;
+	}
+}
+
+@media screen 
+  and (min-device-width: 400px) 
+  and (max-device-height: 750px) 
+ {
+	*{
+		font-size: 24px;
+	}
+}
+
+
+@media screen 
+  and (min-device-width: 350px) 
+  and (max-device-height: 700px) 
+ {
+	*{
+		font-size: 18px;
+	}
+}
+
+
+
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	*{
+		font-size: 28px;
+		
+	}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+	*{
+		font-size: 24px;
+	}
+}
+
+
+

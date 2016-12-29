@@ -1,0 +1,9 @@
+.MyCurrentPosition {
+	color:#025f9a;
+}
+
+.GPS_TRACKER{
+	position: absolute;
+    top: 55px;
+    left: 5px;
+}

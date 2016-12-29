@@ -1,0 +1,51 @@
+.appUnderTabls{
+	width: 100%;
+	height: calc(100vh - 184px);
+	overflow-x: hidden;
+	overflow-y: auto;
+
+}
+
+
+.theme__tab___2YMGw{
+	padding: 0rem 0rem;
+}
+
+
+
+@media screen and (min-device-width: 350px) and (max-device-height: 700px) {
+	.appUnderTabls{
+		height: calc(100vh - 158px);
+	}
+}
+
+
+
+@media screen and (min-device-width: 320px) and (max-device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+	.appUnderTabls{
+		height: calc(100vh - 156px);
+	}
+
+}
+
+@media screen and (min-device-width: 400px) and (max-device-height: 750px) {
+	.appUnderTabls{
+		height: calc(100vh - 184px);
+	}
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.appUnderTabls{
+		height: calc(100vh - 223px);
+	}
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+	.appUnderTabls{
+		height: calc(100vh - 223px);
+	}
+}

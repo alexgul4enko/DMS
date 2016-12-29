@@ -1,0 +1,140 @@
+#main_menu {
+	width: 100%;
+	background:#394246;
+	display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.rootComponentContainer{
+	width: 100%;
+	height: 100%;
+}
+
+
+#app_cont {
+	width: 100%;
+	height: calc(100% - 50px);
+	overflow-y: auto;
+	overflow-x: hidden;
+	background: #57595f;
+	position: relative;
+}
+
+
+.app_cont .tt{
+	width: 100%;
+	font-size: 1.4em;
+	color: white;
+	text-align: center;
+}
+
+
+#main_menu .fs{
+	height: 100%;
+}
+
+#main_menu .material-icons{
+	color:white;
+	align-self: center;
+	font-size: 40px;
+	padding: 5px;
+}
+
+
+.SyncDialog {
+	width: 100%;
+	padding:0;
+	margin: 0;
+}
+
+.SyncDialog h1{
+	text-align: center;
+}
+
+.SyncDialog .SyncButtons {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.SyncDialog .SyncButtons .material-icons{
+	width: 50%;
+	font-size: 40px;
+	padding: 5px;
+	text-align: center;
+	color: white;
+	border-radius: 5px;
+}
+
+.SyncDialog .SyncButtons .material-icons:nth-child(1){
+	background: #1a771e;
+}
+.SyncDialog .SyncButtons .material-icons:nth-child(2){
+	background: #c50000;
+}
+
+
+
+
+
+@media screen and (min-device-width: 320px) and (max-device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+	#main_menu .material-icons{
+		font-size: 30px;
+		padding: 10px;
+	}
+	.SyncDialog .SyncButtons .material-icons{
+		font-size: 30px;
+		padding: 10px;
+	}
+	#app_cont {
+		height: calc(100% - 50px);
+	}
+
+}
+
+@media screen and (min-device-width: 400px) and (max-device-height: 750px) {
+	#main_menu .material-icons{
+		font-size: 40px;
+		padding: 10px;
+	}
+	.SyncDialog .SyncButtons .material-icons{
+		font-size: 40px;
+		padding: 10px;
+	}
+	#app_cont {
+		height: calc(100% - 60px);
+	}
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	#main_menu .material-icons{
+		font-size: 55px;
+		padding: 10px;
+	}
+	.SyncDialog .SyncButtons .material-icons{
+		font-size: 55px;
+		padding: 10px;
+	}
+	#app_cont {
+		height: calc(100% - 75px);
+	}
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+	#main_menu .material-icons{
+		font-size: 55px;
+		padding: 10px;
+	}
+	.SyncDialog .SyncButtons .material-icons{
+		font-size: 55px;
+		padding: 10px;
+	}
+	#app_cont {
+		height: calc(100% - 75px);
+	}
+}

@@ -1,0 +1,53 @@
+.prodGroup .prodGroupTitle{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding: 5px 10px;
+	justify-content: space-between;
+	background: #2b2b2d;
+	border: 0;
+	border-bottom: 1px solid white;
+}
+
+.prodGroup .prodGroupTitle .title{
+	font-size: 1.2em;
+	color: white;
+	align-self: center;
+	padding-left: 10px;
+
+}
+
+.prodGroup.hidden {
+	display:none;
+}
+
+
+
+.products-enter {
+  opacity: 0.01;
+}
+
+.products-enter.products-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.products-leave {
+  opacity: 1;
+}
+
+.products-leave.products-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+
+.products-appear {
+  opacity: 0.01;
+}
+
+.products-appear.products-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+

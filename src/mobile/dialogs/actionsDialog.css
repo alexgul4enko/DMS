@@ -1,0 +1,121 @@
+.ActionsDialog_ .theme__body___1_nNM{
+	padding: 0!important;
+	width: 100%;
+}
+.ActionsDialog_ {
+	width: 96vw!important;
+}
+
+    
+
+.SyncDialog {
+	width: 100%;
+}
+.SyncDialog .ActionsDialog {
+	width: 100%;
+
+}
+
+.SyncDialog .ActionsDialog h1 {
+	text-align: center;
+	font-size: 1.3em;
+	
+}
+.SyncDialog .ActionsDialog >div{
+	width: 100%;
+}
+
+.SyncDialog .ActionsDialog .rejectInput {
+	border:0;
+	font-size: 1.4em;
+	border-bottom: 2px solid black;	
+	margin-bottom: 1rem;
+	width: calc(100% - 1rem);
+	padding: 0;
+	padding-left: 1rem;
+	padding-bottom: 0.3rem;
+}
+
+.SyncDialog .ActionsDialog .dialog_actions{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+}
+
+.SyncDialog .ActionsDialog .dialog_actions .dialog_bitton{
+	color:white;
+	border-radius: 5px;
+	font-size: 2em;
+	width: 50%;
+	padding: 10px 0px;
+	text-align: center;
+}
+
+.SyncDialog .ActionsDialog .dialog_actions .dialog_bitton.red{
+	background: #f44336;
+}
+
+.SyncDialog .ActionsDialog .dialog_actions .dialog_bitton.green{
+	background: #4caf50;
+
+}
+
+
+.SyncDialog .ActionsDialog .CHECKBOX{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin-bottom: 1rem;
+}
+
+.SyncDialog .ActionsDialog .CHECKBOX .material-icons{
+	font-size: 2em;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	align-self: center;
+	color: #03a9f4;
+}
+.SyncDialog .ActionsDialog .CHECKBOX .label{
+	font-size: 1.2em;
+	vertical-align: middle;
+	align-self: center;
+}
+
+
+.SyncDialog .ActionsDialog .CHECKBOX .material-icons.green{
+	color: #4caf50;
+}
+
+.SyncDialog .ActionsDialog .box{
+	max-height: 60vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+}
+
+
+.SyncDialog .ActionsDialog .switch{
+	text-align: center;
+
+}
+
+
+.SyncDialog .ActionsDialog .range h2{
+	width: 100%;
+	text-align: center;
+	font-size: 1.3em;
+	margin: 10px 0px;
+}
+
+.SyncDialog .ActionsDialog .stars {
+	text-align: center;
+}
+
+.SyncDialog .ActionsDialog .stars >div{
+	display: inline-block;
+}
+
+
+
+

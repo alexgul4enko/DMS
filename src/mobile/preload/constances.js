@@ -1,0 +1,5 @@
+export default {
+	UNLOCKAPP : "UNLOCKAPP",
+	GO_TO_APP : "GO_TO_APP",
+	START_SYNC_DATA : "START_SYNC_DATA"
+}

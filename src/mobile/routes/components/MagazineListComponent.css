@@ -1,0 +1,66 @@
+.TTListElement {
+	width: calc(100% - 20px);
+	padding: 0px 10px 5px 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	border-top: 2px solid white;
+
+
+}
+
+.TTListElement .marker{
+	background: grey;
+	min-width: 50px;
+	margin-right: 3px;
+}
+
+.TTListElement .TT_Info {
+	display: flex;
+	flex-direction: column;
+}
+
+.TTListElement .marker >span{
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	font-size: 40px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.TTListElement .marker.today{
+	background: #ffc107;
+	font-size: 1.1em;
+}
+
+
+.TTListElement .marker.reject{
+	background: #f44336;
+	content:"highlight_off";
+}
+
+.TTListElement .TT_Info :nth-child(1){
+
+}
+
+
+.TTListElement .TT_Info :nth-child(2){
+	text-align: center;
+}
+.TTListElement .TT_Info :nth-child(3){
+	color: #d8d8d8;
+	font-size: 0.9em;
+}
+
+.TTListElement .marker.visit{
+	background: #4caf50;
+	content:"done";
+	margin-top:2px;
+}
+
+
+
+
+

@@ -1,0 +1,219 @@
+.OrderView{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	border: 0;
+	border-bottom: 2px solid #e5e8ff;
+	position: relative;
+
+}
+
+
+.OrderView .mainInfo {
+	width: calc(70% - 20px);
+	display: flex;
+	flex-direction: column;
+	padding:5px;
+	justify-content: space-around;
+
+}
+
+.OrderView .mainInfo .footer {
+	width: calc(100%-10px);
+	display: flex;
+	flex-direction: row;
+	padding:0px 10px;
+	justify-content: space-between;
+
+}
+
+.OrderView .mainInfo .footer .date{
+	font-size: 1.1em;
+	align-self: center;
+}	
+
+.OrderView .mainInfo .footer .delete{
+	
+	font-size: 2em;
+	color:#800900;
+	
+}
+
+
+
+
+
+.OrderView .mainInfo .magazine{
+	width: 100%;
+	text-align: center;
+	/*color:aliceblue;*/
+	font-size: 1.1em;
+	/*text-decoration: underline;*/
+}
+
+.OrderView .mainInfo .order{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	padding: 0px 20px;
+}
+
+.OrderView .mainInfo .order .numbers{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	color:white;
+}
+
+.OrderView .mainInfo .order .numbers span:nth-child(1){
+
+}
+.OrderView .mainInfo .order .numbers span:nth-child(2){
+	
+}
+
+
+.OrderView .slider{
+	width: 30%;
+	padding-right: 6px;
+	padding-left: 3px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-left: 1px solid #e5e8ff;
+}
+
+
+.OrderView .slider *{
+	width: calc(100% - 10px);
+	text-align: center;
+	padding: 5px 0px;
+
+}
+
+
+.OrderView .slider .comment {
+	color: white;
+	font-size: 2em;
+	padding-top: 0px;
+}
+
+
+.PreOrderDialog .theme__body___1_nNM{
+	padding: 0!important;
+	width: 100%;
+}
+.PreOrderDialog {
+	width: 96vw!important;
+}
+
+.PreOrderDialog h1 {
+	width: 100%;
+	font-size: 1.3em;
+	text-align: center;
+	padding-top:5px;
+	padding-bottom: 5px;
+}
+
+.PreOrderDialog .buttons {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+
+.PreOrderDialog .buttons .dialog_bitton{
+	color:white;
+	border-radius: 5px;
+	font-size: 2em;
+	width: 50%;
+	padding: 10px 0px;
+	text-align: center;
+}
+
+.PreOrderDialog .buttons .dialog_bitton.red{
+	background: #f44336;
+}
+
+.PreOrderDialog .buttons .dialog_bitton.green{
+	background: #4caf50;
+
+}
+
+
+
+
+
+.PreOrderDialog .checkBoxes{
+	margin-bottom: 1rem;
+	width: 100%;
+}
+
+
+.PreOrderDialog .checkBoxes .box{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+
+}
+
+
+.PreOrderDialog .box .CHECKBOX {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding-top: 5px;
+}
+
+.PreOrderDialog .box .CHECKBOX .material-icons{
+	font-size: 2em;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	color: #03a9f4;
+}
+.PreOrderDialog .box .CHECKBOX .label{
+	font-size: 1.2em;
+	vertical-align: middle;
+	align-self: center;
+}
+
+
+.PreOrderDialog .box .CHECKBOX .material-icons.green{
+	color: #4caf50;
+}
+
+
+.PreOrderDialog .Comment{
+	border:0;
+	font-size: 1.4em;
+	border-bottom: 2px solid black;	
+	margin-bottom: 1rem;
+	width: calc(100% - 1rem);
+	padding: 0;
+	padding-left: 1rem;
+	padding-bottom: 0.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

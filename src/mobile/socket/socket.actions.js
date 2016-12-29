@@ -1,0 +1,6 @@
+const socketActions = {
+	connect:function (){
+		
+	}
+
+}

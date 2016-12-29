@@ -1,0 +1,49 @@
+.TTItem{
+	display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    border: 0;
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+
+.TTItem  > div{
+	
+}
+.TTItem > div:first-child{
+	width: 30px;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 66px;
+    border: 0;
+
+}
+.TTItem > div:last-child{
+	width: calc(100% - 30px);
+}
+
+.TTInfo > div {
+	width: calc(100% - 10px);
+    padding-left: 10px;
+}
+
+.TTItem .Reject{
+	background:#00AC97;
+}
+
+.TTItem .Complite{
+	background:#00AC97;
+}
+
+.TTItem .Today{
+	background:#F0E68C;
+}
+
+.TTItem .Feature{
+	background:#FA8072;
+}
+
+
+ /*#FA8072  #FA8072  #D09647 yellow #FA8072 red*/

@@ -1,0 +1,345 @@
+
+
+
+html, body{
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'open_sanslight';
+    position: relative;
+
+}
+
+#header{
+    width: 100%;
+    height: 50px;
+    background: #394246;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+   
+    
+}
+
+
+
+#header #appWork{
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top:0;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#header .fa{
+    height: 100%;
+    width: 50px;
+    cursor: pointer;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    
+    
+}
+
+
+
+
+
+#contentf{
+    position: relative;
+    background:#5c6a70;
+    height: calc(100% - 50px) ;
+    width: 100%;
+}
+
+
+#contentf #tt {
+
+    position:absolute;
+    width:80%;
+    max-width:280px;
+    left:50%;
+    transform: translateX(-50%);
+   -moz-transform: translateX(-50%); /* Для Firefox */
+   -ms-transform: translateX(-50%); /* Для IE */
+   -webkit-transform: translateX(-50%); /* Для Safari, Chrome, iOS */
+   -o-transform: translateX(-50%); /* Для Opera */
+   top:10%;
+
+}
+
+
+
+#contentf .sinc{
+    display:block;
+    color:white;
+    font-size:16px;
+    padding:10px 10px;
+    background:#394246;
+    text-align:center;
+}
+
+#contentf #donotsinc{
+    margin-top:5px;
+}
+
+
+@media only screen 
+  and (min-device-width: 600px){
+      
+
+      #contentf .sinc{
+          font-size:18px;
+          font-stretch: expanded;
+      }
+
+  }
+
+
+@media only screen 
+  and (min-device-width: 1000px){
+      #contentf .sinc{
+          font-size:22px;
+          font-stretch: expanded;
+          padding:15px 10px;
+      }
+      #contentf #tt{
+          max-width:320px;
+
+
+      }
+      #header{
+          height:70px;
+      }
+      #header .fa{
+          width:70px;
+          line-height:70px;
+          font-size: 30px;
+
+      }
+
+      
+        #contentf{
+            height: calc(100% - 70px) ;
+
+        }
+
+      
+  }
+
+
+  #loader{
+      height:100%;
+      width:100%;
+      position:absolute;
+      top:0;
+      left:0;
+      
+      background:black;
+  }
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('./OpenSans/opensans_light_macroman/OpenSans-Light-webfont.eot');
+    src: url('./OpenSans/opensans_light_macroman/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./OpenSans/opensans_light_macroman/OpenSans-Light-webfont.woff') format('woff'),
+         url('./OpenSans/opensans_light_macroman/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('./OpenSans/opensans_light_macroman/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+html, body{
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'open_sanslight';
+    position: relative;
+
+}
+
+#header{
+    width: 100%;
+    height: 50px;
+    background: #394246;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+   
+    
+}
+
+
+
+#header #appWork{
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top:0;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#header .fa{
+    height: 100%;
+    width: 50px;
+    cursor: pointer;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    
+    
+}
+
+
+
+
+
+#contentf{
+    position: relative;
+    background:#5c6a70;
+    height: calc(100% - 50px) ;
+    width: 100%;
+}
+
+
+#contentf #tt {
+
+    position:absolute;
+    width:80%;
+    max-width:280px;
+    left:50%;
+    transform: translateX(-50%);
+   -moz-transform: translateX(-50%); /* Для Firefox */
+   -ms-transform: translateX(-50%); /* Для IE */
+   -webkit-transform: translateX(-50%); /* Для Safari, Chrome, iOS */
+   -o-transform: translateX(-50%); /* Для Opera */
+   top:10%;
+
+}
+
+
+
+#contentf .sinc{
+    display:block;
+    color:white;
+    font-size:16px;
+    padding:10px 10px;
+    background:#394246;
+    text-align:center;
+}
+
+#contentf #donotsinc{
+    margin-top:5px;
+}
+
+
+@media only screen 
+  and (min-device-width: 600px){
+      
+
+      #contentf .sinc{
+          font-size:18px;
+          font-stretch: expanded;
+      }
+
+  }
+
+
+@media only screen 
+  and (min-device-width: 1000px){
+      #contentf .sinc{
+          font-size:22px;
+          font-stretch: expanded;
+          padding:15px 10px;
+      }
+      #contentf #tt{
+          max-width:320px;
+
+
+      }
+      #header{
+          height:70px;
+      }
+      #header .fa{
+          width:70px;
+          line-height:70px;
+          font-size: 30px;
+
+      }
+
+      
+        #contentf{
+            height: calc(100% - 70px) ;
+
+        }
+
+      
+  }
+
+
+  #loader{
+      height:100%;
+      width:100%;
+      position:absolute;
+      top:0;
+      left:0;
+      padding-top:10px;
+      background:black;
+  }
+
+
+
+.loadinfo {
+  width:100%;
+  color:white;
+  font-size:16px;
+  height:30px;
+  line-height:30px;
+  padding-left:20px;
+}
+.loadinfo .fa-spinner{
+  font-size:30px;
+  margin-left:10px;
+}
+
+
+.loadinfo_cont {
+  color:white;
+  font-size:14px;
+  padding-left:30px;
+
+}
+
+
+.loadinfo_cont.err{
+  color:red;
+}
+
+
+#go{
+    margin-top:20px;
+    color:white;
+    font-size:16px;
+    padding:10px 10px;
+    background:#394246;
+    text-align:center;
+
+}

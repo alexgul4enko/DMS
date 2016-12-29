@@ -1,0 +1,115 @@
+.OrderDialog .theme__body___1_nNM{
+	padding: 0!important;
+	width: 100%;
+}
+.OrderDialog {
+	width: 96vw!important;
+}
+
+
+.OrderDialog .dialog_content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+.OrderDialog .dialog_content .buttons{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	
+}
+
+.OrderDialog .dialog_content .buttons >span{
+	color:white;
+	border-radius: 5px;
+	font-size: 2em;
+	text-align: center;
+	width: 100%;
+	padding: 10px 0px;
+}
+
+.OrderDialog .dialog_content .buttons .reject{
+	background: #f44336;
+}
+
+.OrderDialog .dialog_content .buttons .ok{
+	background: #4caf50;
+}
+
+.OrderDialog .dialog_content h1{
+	text-align: center;
+	font-size: 1.3em;
+}
+
+
+.OrderDialog .dialog_content .answers{
+	padding: 10px 0px;
+	width: 100%;
+	max-height: 60vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+
+}
+
+.OrderDialog .dialog_content .answers .CHECKBOX{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin-bottom: 1rem;
+}
+
+.OrderDialog .dialog_content .answers .CHECKBOX .material-icons{
+	font-size: 2em;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	align-self: center;
+	color: #03a9f4;
+}
+.OrderDialog .dialog_content .answers .CHECKBOX .label{
+	font-size: 1.2em;
+	vertical-align: middle;
+	align-self: center;
+}
+
+
+.OrderDialog .dialog_content .answers .CHECKBOX .material-icons.green{
+	color: #4caf50;
+}
+
+
+.OrderDialog .dialog_content .answers .Discount_comment{
+	font-size: 1.2em;
+	vertical-align: middle;
+	align-self: center;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+
+.OrderDialog .dialog_content .rejectInput {
+	border:0;
+	font-size: 1.4em;
+	border-bottom: 2px solid black;	
+	margin-bottom: 1rem;
+	width: calc(100% - 1rem);
+	padding: 0;
+	padding-left: 1rem;
+	padding-bottom: 0.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

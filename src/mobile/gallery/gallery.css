@@ -1,0 +1,48 @@
+.Image_Galery{
+	padding: 5px;
+	
+}
+
+.Gallery_ {
+	text-align: center;
+}
+
+.Gallery_Dialo {
+	text-align: center;
+}
+
+.Gallery_Dialo .dialog_actions{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+}
+
+.Gallery_Dialo .dialog_actions .dialog_bitton{
+	color:white;
+	border-radius: 5px;
+	font-size: 2em;
+	width: 50%;
+	padding: 10px 0px;
+	text-align: center;
+}
+
+.Gallery_Dialo .dialog_actions .dialog_bitton.red{
+	background: #f44336;
+}
+
+.Gallery_Dialo .dialog_actions .dialog_bitton.green{
+	background: #4caf50;
+
+}
+
+.Gallery_Dialo h1{
+	width: 100%;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+.Gallery_Dialo .ImageToDrop{
+	max-width: 90vw;
+	max-height: 40vh;
+}

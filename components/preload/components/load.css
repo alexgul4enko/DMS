@@ -1,0 +1,107 @@
+
+
+#loaders {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: black;
+	top:0;
+	left:0;
+	display: none;
+}
+
+
+#loaders.load{
+	display: block;
+}
+
+
+#loaders .loadersHeader {
+	color: white;
+    font-size: 18px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 10px;
+}
+#loaders .loadersINfo{
+	color:white;
+	margin-left: 30px;
+}
+#loaders .LoadButon{
+	color: white;
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    background: #5c6a70;
+    text-align: center;
+    line-height: 30px;
+}
+
+#loaders .loadersINfo span{
+	margin-right: 5px;
+	font-size: 16px;
+}
+
+#loaders .loadersINfo.ok{
+	color:#80d680;
+}
+
+#loaders .loadersINfo.notok{
+	color:#ff6f6f;
+}
+
+
+
+
+
+@media only screen 
+  and (min-device-width: 600px){
+		#loaders .loadersHeader {
+		    font-size: 22px;
+		    height: 30px;
+		    line-height: 30px;
+		    margin-left: 20px;
+		}
+		#loaders .loadersINfo{
+			margin-left: 40px;
+			font-size: 20px;
+		}
+		#loaders .LoadButon{
+		    margin-top: 20px;
+		    height: 50px;
+		    line-height: 50px;
+		    font-size: 20px;
+		}
+		#loaders .loadersINfo span{
+			margin-right: 15px;
+			font-size: 20px;
+		}
+      
+  }
+
+
+@media only screen 
+  and (min-device-width: 1000px){
+      #loaders .loadersHeader {
+		    font-size: 28px;
+		    height: 40px;
+		    line-height: 40px;
+		    margin-left: 30px;
+		}
+		#loaders .loadersINfo{
+			margin-left: 60px;
+			font-size: 25px;
+		}
+		#loaders .LoadButon{
+		    margin-top: 20px;
+		    height: 70px;
+		    line-height: 70px;
+		    font-size: 28px;
+		}
+		#loaders .loadersINfo span{
+			margin-right: 15px;
+			font-size: 25px;
+		}
+      
+  }
+

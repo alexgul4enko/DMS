@@ -1,0 +1,24 @@
+.Content {
+	width: 100%;
+	height: calc(100% - 50px);
+	background:#67777e;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.app{
+	width: 100%;
+	height: 100%;
+}
+
+.theme__snackbar___33MRN.theme__warning___29XlW{
+	width: calc(100% - 20px);
+    padding: 10px 10px;
+    margin: 0;
+    left: 0;
+}
+
+
+.theme__snackbar___33MRN.theme__warning___29XlW .theme__button___psiy3{
+	margin-left: 0px;
+}
