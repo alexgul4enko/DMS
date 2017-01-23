@@ -4,6 +4,7 @@ var TTPatFormsRout = function (cp){
   const dbrouters = require('../routes/TTPayForms')(cp);
  
   router.get('/', dbrouters.get);
+  router.post('/', dbrouters.post);
 
  
 

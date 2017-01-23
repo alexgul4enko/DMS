@@ -38,34 +38,41 @@ export default class GalleryComponent extends Component{
 	dropImage(){
 		const {id, src} = this.state.data;
 		const actionID = this.props.location.state.action.key;
-		const answer = this.props.TTAns[actionID];
-
-		const nextAns ={
-						id:answer.id, 
-						ans: answer.ans.filter(data=>{
-								return data &&  data.imgID & data.imgID !=id;
-							}),
-					};
-
-
-		this.props.deleteImage(id, nextAns);
+		const prodId  =this.props.location &&
+					 this.props.location.state && 
+					 this.props.location.state.action && 
+					 this.props.location.state.action.prodId;
+		if (prodId){
+			this.props.deleteProductImage(id, this.props.location.state.action);
+		}
+		else{
+			const answer = this.props.TTAns[actionID];
+			const nextAns ={
+							id:answer.id, 
+							ans: answer.ans.filter(data=>{
+									console.log(data);
+									return data &&  data.imgID !=id;
+								}),
+						};
+			this.props.deleteImage(id, nextAns);
+		}
 		this.setState({active:false, data:null});
 
 	}
-
 	render(){
-
 		return (
 			<div className = "rootComponentContainer">
 				<Menu/>
 				<div id="app_cont" className = "Gallery_">
+
 					{this.props.Images? this.props.Images.map((data,key)=>{
-							return <Galery_Photo 
+							return data?  <Galery_Photo 
 											handler = {this.openDialog}
 											width = {this.state.width/2}
 											src = {data.data} 
 											id =  {data.id}
 											key = {key}/>
+											:null
 						})
 						:''
 					}

@@ -1,15 +1,15 @@
 module.exports = {
 	 db:{
-		    user: '********',
-		    password: '*******',
-		    server: '*********',
+		    user: '************',
+		    password: '************',
+		    server: '************',
 		    //connectionTimeout: 60000,
-		    port:"*****",  
-		    database: '**********'
+		    port:"************",  
+		    database: '************'
 		},
-	secretKey:"KCDUWIAYD&^@%&$&@*&&%BNCKYT$$@^&(#*E%R*BUIIbcagjckcbsj",
+	secretKey:"************",
 	port:9082,
-	google_map_key:"**********",
+	google_map_key:"************",
 	deloveryForms:["Курьер", "Самовывоз"],
 	files_folder : "/Users/AGulchenko/Documents/Pictures",
 

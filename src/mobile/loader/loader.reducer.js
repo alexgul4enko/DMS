@@ -19,6 +19,10 @@ export default function loaderReducer (state = {}, action){
 			return Object.assign({},state,{
 				ttl: [...(state.ttl||[]) , {label :"Загрузка заданий по ТТ", isload:false}]
 			})
+		case Constances.ADDPRODUCTSACTIONSTITLE:
+			return Object.assign({},state,{
+				ttl: [...(state.ttl||[]) , {label :"Загрузка заданий по продуктам", isload:false}]
+			})
 		case Constances.STOCKS_LOADET:
 			return Object.assign({},state,{
 					ttl: state.ttl.map(u=>{
@@ -36,6 +40,17 @@ export default function loaderReducer (state = {}, action){
 					ttl: state.ttl.map(u=>{
 						if(u.label = "Загрузка заданий по ТТ"){
 							return {label :"Загрузка заданий по ТТ", isload:true}
+						}
+						else{
+							return u;
+						}
+					})
+				})
+		case Constances.ANSWERS_PROD_LOADET:
+			return Object.assign({},state,{
+					ttl: state.ttl.map(u=>{
+						if(u.label = "Загрузка данных остатков"){
+							return {label :"Загрузка данных остатков", isload:true}
 						}
 						else{
 							return u;

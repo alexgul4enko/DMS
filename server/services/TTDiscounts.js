@@ -2,18 +2,21 @@
 var TTDiscounts = function() {};
 var sql = require('mssql');
 
-TTDiscounts.prototype.init = function (data, cp, callback){
-	this.exec(data, cp)
-		.then(data_=>{
-			callback(null, data_);
-		})
-		.catch(err=>{
-			callback(err, null);
-		})
-};
+// TTDiscounts.prototype.init = function (data, cp){
+// 	return new Promise ((resolve, reject)=>{
+// 		this.exec(data, cp)
+// 			.then(data=>{
+// 				resolve(data);
+// 			})
+// 			.catch(err=>{
+// 				reject(err);
+// 			})
+
+// 	})
+// };
 
 
-TTDiscounts.prototype.exec = function (data, cp){
+TTDiscounts.prototype.get = function (data, cp){
 
 	return new Promise((resolve,reject)=>{
 		var request = new sql.Request(cp);

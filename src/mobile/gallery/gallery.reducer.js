@@ -4,6 +4,7 @@ export function ImagesGaleryreducer (state = [], action){
 	switch(action.type){
 		case Constances.GALLERY_REMOVE_IMAGE:
 			return state.filter(data=>{
+				if(!data) return false;
 				return data.id !=action.rehidrate;
 			});
 		default:

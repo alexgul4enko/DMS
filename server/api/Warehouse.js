@@ -6,7 +6,7 @@ var rout = function (cp){
   const dbrouters = require('../routes/Warehouse')(cp);
  
   router.get('/', dbrouters.get);
-
+  router.post('/', dbrouters.post);
   return router;
 }
 

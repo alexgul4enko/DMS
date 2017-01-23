@@ -14,6 +14,7 @@ import PreOrder from './preOrder/PreOrder';
 import Order from './order/Order';
 import Stocks from './stocks/Stocks';
 import Loader from './loader/Loader';
+import ProdActions from './prodActions/ProdActions';
 
 
 export default (
@@ -31,7 +32,7 @@ export default (
     <Route path="Order" component = {Order} />
     <Route path="Stocks" component = {Stocks} />
     <Route path="SendData" component = {Loader} />
-    
+    <Route path="ProductActions" component = {ProdActions} />
     
   </Route>
 );

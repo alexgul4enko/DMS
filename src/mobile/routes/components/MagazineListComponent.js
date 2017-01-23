@@ -40,17 +40,22 @@ export default class MagazineListComponent extends Component {
 
 
 
+
+
+
 function preatyDay(day=""){
 	if(!day){
 		return "";
 	}
 	let ThatDay = new Date (day);
-	return `${ThatDay.getYear()+1990}-${ThatDay.getMonth()<10 
-										? '0'+ ThatDay.getMonth() 
-										: ThatDay.getMonth()}-${
+	
+	const f = `${ThatDay.getYear()+1990}-${ThatDay.getMonth()+1<10 
+										? '0'+ (ThatDay.getMonth() +1)
+										: ThatDay.getMonth()+1}-${
 										ThatDay.getDate()<10 
 										? '0'+ ThatDay.getDate() 
-										: ThatDay.getMonth()}`
+										: ThatDay.getDate()}`;
+	return f;
 }
 
 function  isToday(day = null){

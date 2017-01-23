@@ -6,6 +6,7 @@ var rout = function (cp){
   const dbrouters = require('../routes/PriceList')(cp);
  
   router.get('/', dbrouters.get);
+  router.post('/', dbrouters.post);
 
  
 

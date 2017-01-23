@@ -46,23 +46,7 @@ module.exports = {
 					presets:['es2015','react','stage-0']
 				}
 			},
-<<<<<<< HEAD
-            {
-              test: /\.s?css$/,
-              loaders: ['style', 'css', 'sass'],
-              exclude: /(node_modules)\/react-toolbox/
-          },
-       {
-              test    : /(\.scss|\.css)$/,
-              include : /(node_modules)\/react-toolbox/,
 
-              loaders : [
-                require.resolve('style-loader'),
-                require.resolve('css-loader') + '?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-                require.resolve('sass-loader') + '?sourceMap'
-              ]
-            }
-=======
 	         {
 	            test    : /(\.scss|\.css)$/,
 	            include : path.resolve(__dirname, './node_modules','react-toolbox'),
@@ -78,7 +62,6 @@ module.exports = {
 	            loaders: ['style', 'css', 'sass'],
 	            exclude: path.resolve(__dirname, './node_modules','react-toolbox')
 	        }
->>>>>>> full
 	          
 	          , { 
 			      test: /\.(png|woff|woff2|eot|ttf|otf|svg)$/, 

@@ -19,6 +19,9 @@ export default class  ActionsComponent extends Component{
 		if(this.props.act.act ==-19){
 			check_box = "local_grocery_store"
 		}
+		if(this.props.act.type == 3){
+			check_box = "question_answer"
+		}
 		return (
 			<div
 				onClick = {this.clickAction} 
@@ -33,5 +36,4 @@ export default class  ActionsComponent extends Component{
 		this.props.click(this.props.act);
 	}
 }
-
 

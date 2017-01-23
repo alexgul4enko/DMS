@@ -7,6 +7,7 @@ import YesNo from './YesNo';
 import Range from './Range';
 import Rate from './Rate';
 import TextQuestion from './TextQuestion';
+import IntegerQuestion from './IntegerQuestion';
 
 export default class DialogContent extends Component{
 
@@ -70,6 +71,13 @@ export default class DialogContent extends Component{
 									ref = "content"
 									question = {this.props.question}
 									answer = {answer} />);
+
+					case 10:
+						return (<IntegerQuestion 
+									ref = "content"
+									question = {this.props.question}
+									value = {answer}
+								/>);
 
 					default :
 						return (<p>asdasda</p>);

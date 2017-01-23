@@ -1,6 +1,5 @@
 import React , {Component} from 'react'
 
-
 class PreloadMenu extends Component{
 	render (){
 		return (
@@ -20,6 +19,7 @@ class PreloadMenu extends Component{
 							onClick={this.props.toLoad}>
 								Синхронизироваться
 						</div>
+						
 					</div>
 
 				</div>

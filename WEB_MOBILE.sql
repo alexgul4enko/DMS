@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> full
+
 use bacchus_DMSData
 
 GO
@@ -1473,9 +1470,7 @@ GO
 
 
 
-<<<<<<< HEAD
-=======
-=======
+
 use bacchus_DMSData
 
 GO
@@ -2913,6 +2908,28 @@ END
 
 GO
 
+GO
+/*check table web.TTAnswer*/
+IF NOT EXISTS ( SELECT 1
+					FROM sys.tables TA
+					WHERE SCHEMA_NAME(TA.[schema_id]) = 'web' 
+					AND TA.name = 'TTProdAnswer')
+BEGIN
+	CREATE TABLE web.TTProdAnswer(
+		ID bigint IDENTITY PRIMARY KEY,
+		ActKey bigint,
+		ProdId bigint,
+		ActId bigint ,
+		Date datetime ,
+		ln float ,
+		lg float ,
+		Answer varchar(700)
+	)
+
+	CREATE NONCLUSTERED INDEX IX_TT_PROD_ANSWERS_SEARCH ON web.TTProdAnswer (ActKey ,ProdId,ActId,[Date] )
+END
+
+GO
 
 
 
@@ -2920,32 +2937,45 @@ GO
 
 
 
+GO
+IF NOT EXISTS  (SELECT 1 from sys.types WHERE name = 'TTPRODANSWERS_TYPE')
+BEGIN
+CREATE TYPE dbo.TTPRODANSWERS_TYPE AS TABLE(
+		ActKey bigint,
+		ProdId bigint,
+		ActId bigint ,
+		Date datetime ,
+		ln float ,
+		lg float ,
+		Answer varchar(700)
+)
+END
+GO
+
+GO
+IF EXISTS (SELECT 1 
+					from sys.procedures 
+					where name = 'INS_TT_PROD_ANSWERS'
+					AND  SCHEMA_NAME([schema_id]) = 'web'  )
+BEGIN
+	DROP PROCEDURE web.INS_TT_PROD_ANSWERS
+END
+go
+
+CREATE PROC web.INS_TT_PROD_ANSWERS (@answers TTPRODANSWERS_TYPE readonly)
+AS
+BEGIN
+	DELETE FROM  web.TTProdAnswer
+	WHERE EXISTS (SELECT 1
+					FROM @answers A
+					WHERE A.ActKey = web.TTProdAnswer.ActKey
+					AND A.ProdId = web.TTProdAnswer.ProdId
+					AND A.ActId = web.TTProdAnswer.ActId
+					AND A.[Date] =web.TTProdAnswer.[Date] )
+	INSERT INTO web.TTProdAnswer (ActKey,ProdId,ActId, [Date],ln,lg,Answer)
+	SELECT  ActKey,ProdId,ActId, [Date],ln,lg,Answer
+	FROM @answers
+END
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> cd0e6b223827a522955278ede3e4a089342ee61f
->>>>>>> full
+GO

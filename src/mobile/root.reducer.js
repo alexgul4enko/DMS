@@ -14,7 +14,7 @@ import {TTAnswersReducer,
         clearImagesReducer,
         CheckStocksReducer,}  from './Magazines/magazines.reduces';
 
-import {imageReducer,ImageTTActionReducer} from './webCam/camera.reducer';
+import {imageReducer,ImageTTActionReducer,productImagesReducer} from './webCam/camera.reducer';
 import {ImagesGaleryreducer, TTActionGaleryreducer} from './gallery/gallery.reducer';
 import {ordersReducer,
         payFormsReducer,
@@ -25,6 +25,8 @@ import {OrdersWHReducer,OrdersStocksReducer,OrdersMainReducer} from './order/Ord
 import {OrdersSocketReducer,WHSocketReducker} from './store/Socket.reducer'; 
 import {StocksProductsReducer,StocksMainReducer} from './stocks/stocks.reducer';
 import loader from './loader/loader.reducer';
+import ProdAcionsReducer from './prodActions/ProdActions.reducer';
+
 
 const rootReducer = combineReducers({
   routing: routerReducer,
@@ -45,7 +47,9 @@ const rootReducer = combineReducers({
   order:joinReducers(OrdersMainReducer,initOrder,initOrderByComponent),
   WH :joinReducers(OrdersWHReducer,WHSocketReducker),
   Products: StocksProductsReducer,
-  loader
+  loader,
+  ProdActions: ProdAcionsReducer,
+  prodImages:productImagesReducer,
 });
 
 

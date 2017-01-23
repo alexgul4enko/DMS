@@ -118,6 +118,12 @@ export default class MagazineComponent extends Component{
 						this.props.openDialog(action, action.reject)
 						break;
 					}
+				case 3:{
+					browserHistory.push({
+											pathname: '/ProductActions',
+											state: {action, router: this.props.router}
+									});
+				}
 				default:
 					break;
 
@@ -188,6 +194,13 @@ export default class MagazineComponent extends Component{
 							is_muls_ans = true
 						}
 					}
+				}
+				else if(action  && action.type == 3){
+					const answer = null, reject = null;
+					actions.push({...action, 
+										key:id, 
+										answer,
+										reject });
 				}
 
 

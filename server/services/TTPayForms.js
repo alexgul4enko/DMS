@@ -2,18 +2,21 @@
 var TTPayForms = function() {};
 var sql = require('mssql');
 
-TTPayForms.prototype.init = function (data, cp, callback){
-	this.exec(data, cp)
-		.then(data_=>{
-			callback(null, data_);
-		})
-		.catch(err=>{
-			callback(err, null);
-		})
-};
+// TTPayForms.prototype.init = function (data, cp){
+// 	return new Promise ((resolve, reject)=>{
+// 		this.exec(data, cp)
+// 			.then(data=>{
+// 				resolve(data);
+// 			})
+// 			.catch(err=>{
+// 				reject(err);
+// 			})
+
+// 	})
+// };
 
 
-TTPayForms.prototype.exec = function (data, cp){
+TTPayForms.prototype.get = function (data, cp){
 
 	return new Promise((resolve,reject)=>{
 		var request = new sql.Request(cp);

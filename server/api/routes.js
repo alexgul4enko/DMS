@@ -20,7 +20,7 @@ module.exports = function (app,cp) {
 	const Warehouse = require('./Warehouse')(cp);//
 	const Stocks=require('./Stocks')(cp);
 	const TTAnswers=require('./TTAnswers')(cp);
-
+	const TTProdActions=require('./TTProdActions')(cp);
 
 	router.use('/login', login);//
 	router.use('/actions', actions);
@@ -39,6 +39,8 @@ module.exports = function (app,cp) {
 	router.use('/Warehouse', Warehouse);
 	router.use('/stocks', Stocks);
 	router.use('/ttAnswers', TTAnswers);
+	router.use('/TTProdActions', TTProdActions);
+
 
 	router.use('/*', (req, res) => {
 		 res.badRequest();

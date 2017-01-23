@@ -6,6 +6,7 @@ var rout = function (cp){
   const dbrouters = require('../routes/TTAnswers')(cp);
  
   router.post('/', dbrouters.post);
+  
 
   return router;
 }

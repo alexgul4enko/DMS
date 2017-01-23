@@ -19,20 +19,37 @@ export default class  CameraComponent extends Component {
 
 	takePhoto(){
 		let screenshot = this.refs.webcam.getScreenshot();
+		this.setState({ref:screenshot});
 		if (screenshot.length>50){
-			this.setState({ref:screenshot});
-			const answer = this.props.PhotoAnswer ? this.props.PhotoAnswer 
-						: {
-							id:this.props.CurAction.key,
-							ans:null,
-						};
-			const info = {
-				ln:this.props.GPS.ln,
-				lg:this.props.GPS.lg,
-				date :new Date(),
+			if (this.props.prodAction){
+				const {mult, prodId, id,key} = this.props.prodAction;
+				const answer = this.props.prodImages;
+				const ActionData = {
+						ln:this.props.GPS.ln,
+						lg:this.props.GPS.lg,
+						date :new Date(),
+					}
+				this.props.AddProdPhoto({mult, prodId, id,key, answer,ActionData,screenshot})
 
 			}
-			this.props.PutData({data:screenshot},answer,info,this.props.CurAction.mult );
+			else{
+				const answer = this.props.PhotoAnswer ? this.props.PhotoAnswer 
+							: {
+								id:this.props.CurAction.key,
+								ans:null,
+
+							};
+				const info = {
+					ln:this.props.GPS.ln,
+					lg:this.props.GPS.lg,
+					date :new Date(),
+
+				}
+				const{mult,prodId,id} = this.props.CurAction || {};
+				this.props.PutData({data:screenshot},answer,info,mult,prodId,id);
+			}
+			
+				
 		}
 	}
 	handleResize(){

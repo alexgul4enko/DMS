@@ -32,6 +32,10 @@ export default {
 											setTimeout(()=>{
 												dispatch(addActinsTitle());
 												sendAnswers(dispatch,imagesObj,counte)
+												setTimeout(()=>{
+													dispatch(addProductsActionsTitle());
+													sendProdAnswers(dispatch,imagesObj,counte);
+												},500);
 											},500)
 									},500)
 
@@ -49,6 +53,10 @@ export default {
 											setTimeout(()=>{
 												dispatch(addActinsTitle());
 												sendAnswers(dispatch,imagesObj,counte)
+												setTimeout(()=>{
+													dispatch(addProductsActionsTitle());
+													sendProdAnswers(dispatch,imagesObj,counte);
+												},500);
 											},500)
 									},500)
 					}
@@ -60,6 +68,84 @@ export default {
 
 	}
 }
+
+
+const sendProdAnswers = (dispatch,imgObj,isDone) =>{
+	return new Promise((resolve,reject)=>{
+
+		getArrData("ProductAnswers")
+			.then(answers=>{
+
+				if(!answers){
+					dispatch(answersProdLoadet())
+					console.log("ANSWERS STOCK");
+				}
+				else{
+					let ansArr=[];
+					answers.map(answer=>{
+						let {id, obj} = answer;
+						id = parseInt(id);
+						for (let prodId in obj){
+							let productAnswers = obj[prodId];
+							if(productAnswers){
+								for (let actID in productAnswers){
+									let {answer, date, ln,lg} = productAnswers[actID]||{}
+									if(!date && answer && Array.isArray(answer)){
+										answer.map(photoAnswer=>{
+											let {date, ln,lg,imgID} =photoAnswer; 
+											ansArr.push({
+														ans:imgObj[imgID+""],
+														data:date,ln,lg,
+														actID,
+														prodId,
+														id
+													})
+										})
+									}
+									else{
+										ansArr.push({
+														ans:answer,
+														data:date,ln,lg,
+														actID,
+														prodId,
+														id
+													})
+									}
+								}
+							}
+						}
+
+					})
+
+
+					HttpPromice("/api/TTProdActions","post",ansArr)
+					.then(d=>{
+						ClearTable("ProductAnswers");
+						let co = isDone();
+						if(co ==3){
+							setTimeout(()=>{dispatch(loaderDoneJob())},500)
+						}
+						dispatch(answersProdLoadet())
+						
+					})
+					.catch (err=>{
+						ClearTable("ProductAnswers");
+						let co = isDone();
+						if(co ==3){
+							setTimeout(()=>{dispatch(loaderDoneJob())},500)
+						}
+						dispatch(answersProdLoadet())
+						
+					})
+				}
+			})
+			.catch(err=>{
+				console.log(err);
+
+			})
+	})
+}
+
 
 
 const counter = ()=>{
@@ -75,6 +161,7 @@ const sendStocks=(dispatch,isDone)=>{
 			.then(stocks=>{
 				if(!stocks){
 					console.log("DONE STOCK");
+					dispatch(stocksLoaded());
 				}
 				else{
 					let stocksArr =[];
@@ -91,7 +178,7 @@ const sendStocks=(dispatch,isDone)=>{
 						dispatch(stocksLoaded());
 						ClearTable("Stocks");
 						let co = isDone();
-						if(co ==2){
+						if(co ==3){
 							setTimeout(()=>{dispatch(loaderDoneJob())},500)
 						}
 					})
@@ -99,7 +186,7 @@ const sendStocks=(dispatch,isDone)=>{
 						dispatch(stocksLoaded());
 						ClearTable("Stocks");
 						let co = isDone();
-						if(co ==2){
+						if(co ==3){
 							setTimeout(()=>{dispatch(loaderDoneJob())},500)
 						}
 					})
@@ -109,12 +196,16 @@ const sendStocks=(dispatch,isDone)=>{
 	})
 }
 
+
+
+
 const sendAnswers = (dispatch,imgObj,isDone) =>{
 	return new Promise((resolve,reject)=>{
 
 		getArrData("TTanswers")
 			.then(answers=>{
 				if(!answers){
+					dispatch(answersLoadet())
 					console.log("ANSWERS STOCK");
 				}
 				else{
@@ -139,7 +230,7 @@ const sendAnswers = (dispatch,imgObj,isDone) =>{
 						ClearTable("TTanswers");
 						ClearTable("Images");
 						let co = isDone();
-						if(co ==2){
+						if(co ==3){
 							setTimeout(()=>{dispatch(loaderDoneJob())},500)
 						}
 						dispatch(answersLoadet())
@@ -149,7 +240,7 @@ const sendAnswers = (dispatch,imgObj,isDone) =>{
 						ClearTable("TTanswers");
 						ClearTable("Images");
 						let co = isDone();
-						if(co ==2){
+						if(co ==3){
 							setTimeout(()=>{dispatch(loaderDoneJob())},500)
 						}
 						dispatch(answersLoadet())
@@ -180,6 +271,12 @@ const answersLoadet = ()=>{
 	}
 }
 
+const answersProdLoadet = ()=>{
+	return {
+		type:Constances.ANSWERS_PROD_LOADET,
+	}
+}
+
 const addTitleForStocks = ()=>{
 	return {
 		type:Constances.ADDSTOCKSTITLE,
@@ -189,6 +286,12 @@ const addTitleForStocks = ()=>{
 const addActinsTitle = ()=>{
 	return {
 		type:Constances.ADDACTIONSTITLE,
+	}
+}
+
+const addProductsActionsTitle = ()=>{
+	return {
+		type:Constances.ADDPRODUCTSACTIONSTITLE,
 	}
 }
 

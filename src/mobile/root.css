@@ -27,7 +27,6 @@ body {
 	position: relative;
 }
 
-<<<<<<< HEAD
 
 .BiServTabs .theme__navigationContainer___rLpe4 > nav {
 	background: #394246;
@@ -47,11 +46,8 @@ body {
 }
 
 
-.BiServTabs  > nav {
-=======
 
 .BiServTabs  nav {
->>>>>>> full
 	background: #394246;
 }
 .BiServTabs > section {
@@ -65,19 +61,18 @@ body {
 	background: white;
 }
 
-<<<<<<< HEAD
 .BiServTabs .theme__pointer___pWCM7{
 	background: white;
 }
 
 .BiServTabs  > nav  > label {
-=======
+	
+}
 .BiServTabs > div > nav > span{
 	background: white;
 }
 
 .BiServTabs .routeLabel {
->>>>>>> full
 	color:white !important;
 	padding:20px 0px !important;
 	font-size: 1em !important;

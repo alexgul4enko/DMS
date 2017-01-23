@@ -1,43 +1,38 @@
 
-var async = require('async');
 var Products = function() {};
 var sql = require('mssql');
 
-Products.prototype.init = function (data, cp, callback){
-	async.parallel([
-		(callback) => {
-			this.exec(data, cp, (err, data_) => {
-				if(err){
-					 callback(err, null);
-				};
-				 callback(null, data_);
-			});
-		}
-		
-	], 
-	(err, result) =>{
-		return callback(err, result);
-	});
-};
+// Products.prototype.init = function (data, cp){
+// 	return new Promise ((resolve, reject)=>{
+// 		this.exec(data, cp)
+// 			.then(data=>{
+// 				resolve(data);
+// 			})
+// 			.catch(err=>{
+// 				reject(err);
+// 			})
+
+// 	})
+// };
 
 
-Products.prototype.exec = function (data, cp, callback){
-	var request = new sql.Request(cp);
-
-	request.input('login', sql.VarChar(50), data.login);
-    request.input('pass', sql.VarChar(50), data.pass);
-    request.execute('web.GET_ProList').then(function(data_) {
-        if(!data_[0].length){
-        	callback("empty", null);
-        	return;
-        }
-        callback(null, data_[0]);
-    }).catch(function(err) {
-       callback(err, null);
-    });
-
-
-      
+Products.prototype.get = function (data, cp){
+	return new Promise((resolve,reject)=>{
+		var request = new sql.Request(cp);
+		request.input('login', sql.VarChar(50), data.login);
+	    request.input('pass', sql.VarChar(50), data.pass);
+	    request.execute('web.GET_ProList')
+	    	.then(data_ => {
+		        if(!data_[0].length){
+		        	reject("empty");
+		        	return;
+		        }
+	        	resolve(data_[0]);
+	    	})
+	    	.catch(err =>{
+		       reject(err.message);
+		    });
+	})
 };
 
 module.exports = new Products();

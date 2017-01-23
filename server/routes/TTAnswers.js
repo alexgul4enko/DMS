@@ -11,7 +11,7 @@ module.exports = function(cp) {
           res.status(200).json({});
         })
         .catch(err=>{
-          res.status(501).send(err);
+          res.status(501).send(err||err.message);
         })
     }
   };
