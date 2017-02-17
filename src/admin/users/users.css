@@ -1,0 +1,39 @@
+#ad-MyUsers {
+	width: calc(100% - 2rem);
+	height: calc(100% - 2rem);
+	background: #43706F;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 1rem;
+	justify-content: space-between;
+}
+
+#ad-MyUsers > div{
+	width: calc(50% - 1rem);
+	min-width: 300px;
+	height: 100%;
+}
+
+
+
+.newUser{
+	/*background: white;*/
+}
+
+#ad-MyUsers .FiltListHeader.usersListHeader{
+	background: #0a435d;
+}
+
+#ad-MyUsers .FiltListHeader.usersListHeader button.add{
+	background: #00bcd4;
+
+}
+
+#ad-MyUsers .FiltListHeader.usersListHeader button.add:active{
+	transform: rotateX(20deg);
+}
+#ad-MyUsers .FiltListHeader.usersListHeader button.add:hover{
+	font-weight: 600;
+}
+

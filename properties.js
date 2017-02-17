@@ -1,15 +1,15 @@
 module.exports = {
 	 db:{
-		    user: '************',
-		    password: '************',
-		    server: '************',
+		    user: 'AGulchenko',
+		    password: 'dH2Ao9yBWr',
+		    server: 'bi-serv.com.ua',
 		    //connectionTimeout: 60000,
-		    port:"************",  
-		    database: '************'
+		    port:"8081",  
+		    database: 'bacchus_DMSData'
 		},
-	secretKey:"************",
+	secretKey:"KCDUWIAYD&^@%&$&@*&&%BNCKYT$$@^&(#*E%R*BUIIbcagjckcbsj",
 	port:9082,
-	google_map_key:"************",
+	google_map_key:"AIzaSyC3IxtK4rVTHLsDyyvjVl1jvqfKPVyvWtM",
 	deloveryForms:["Курьер", "Самовывоз"],
 	files_folder : "/Users/AGulchenko/Documents/Pictures",
 

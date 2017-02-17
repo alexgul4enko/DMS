@@ -16,20 +16,6 @@ render(
 	  document.getElementById('app'),
 	);
 
-// const initialState = {}
-
-// let callback = function (data){
-// 	let store = configureStore(data);
-// 	console.log(data);
-// 	iostore(store);
-//   	render(
-// 	  <Root store={store} history={browserHistory} />,
-// 	  document.getElementById('app'),
-// 	);
-// }
-
-// let db= new WebDB_Get(callback);
-//  db.initDB(initialState);
 
 
 

@@ -21,6 +21,7 @@ module.exports = function (app,cp) {
 	const Stocks=require('./Stocks')(cp);
 	const TTAnswers=require('./TTAnswers')(cp);
 	const TTProdActions=require('./TTProdActions')(cp);
+	const MyUsers=require('./MyUsers')(cp);
 
 	router.use('/login', login);//
 	router.use('/actions', actions);
@@ -40,6 +41,7 @@ module.exports = function (app,cp) {
 	router.use('/stocks', Stocks);
 	router.use('/ttAnswers', TTAnswers);
 	router.use('/TTProdActions', TTProdActions);
+	router.use('/MyUsers', MyUsers);
 
 
 	router.use('/*', (req, res) => {

@@ -11,13 +11,13 @@ module.exports = {
 
   // devtool:"inline-source-map",
   entry:[
-    './src/mobile/webpack-public-path',
+    './src/admin/webpack-public-path',
     'webpack-hot-middleware/client?reload=true',
-    path.resolve(__dirname, 'client/app.js'),
+    path.resolve(__dirname, 'client/admin.js'),
   ],
   output:{
     path: path.join(__dirname,"dist"),
-    filename:"app.bundle.js",
+    filename:"admin.bundle.js",
     publickPath:"/"
   },
   plugins:[
@@ -31,7 +31,7 @@ module.exports = {
   module:{
     loaders:[
       {
-        test:/\.js$/,
+        test: /(\.js|\.jsx)$/,
         loader: 'babel-loader',
         exclude:/node_modules/,
         query:{

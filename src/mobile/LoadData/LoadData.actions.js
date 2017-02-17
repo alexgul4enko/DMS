@@ -23,7 +23,7 @@ const loadDataAction = {
 		return (dispatch,getState)=>{
 			httpGet(url,"GET", null)
 			.then(data=>{
-				 return InsertinitialStage(url,groupData(url,data));
+				return InsertinitialStage(url,groupData(url,data));
 			})
 			.then(final=>{
 				dispatch(loadDataAction.setDataLoadet(url,null));

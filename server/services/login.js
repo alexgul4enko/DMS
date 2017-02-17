@@ -17,16 +17,32 @@ LoginService.prototype.check = function (data, cp){
 		        else{
 		        	resolve(data_[0][0]);
 		        }
-		        
 		    })
 		    .catch(err=> {
 		       reject(err.message);
 		    });
 	})
-		
-
-
       
 };
+LoginService.prototype.getRights = function (userData ={},cp){
+	const {UserLogin} =  userData;
+	return new Promise((resolve, reject)=>{
+		var req = new sql.Request(cp);
+		req.input('login', sql.VarChar(50), UserLogin);
+		req.execute('web.GET_RoleGrands')
+			.then(rigths=>{
+				if(!rigths[0].length){
+		        	resolve(userData);
+		        }
+		        else{
+		        	// console.log(rigths);
+		        	resolve(Object.assign({},userData, {rigths:rigths[0]}));
+		        }
+			})
+			.catch(err=> {
+		       resolve(userData);
+		    });
+	})
+}
 
 module.exports = new LoginService();

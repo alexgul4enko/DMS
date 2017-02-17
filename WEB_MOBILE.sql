@@ -389,7 +389,7 @@ GO
 CREATE PROC web.GET_MainPriceList @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from  web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		DECLARE @DISRT  int = (SELECT BuyerID FROM web.USERS WHERE UserLogin = @login)
 		SELECT ProductID as ProdId,PayForm as Form,Price, Discount
@@ -439,7 +439,7 @@ GO
 CREATE PROC web.GET_Routes @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass))
 	BEGIN
 		SELECT  RO.ID as id, VisitDay as visit,RO.TTID as ttid ,case
 																	when EXISTS (SELECT 1
@@ -499,7 +499,7 @@ GO
 CREATE PROC web.GET_TTPrices @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1  from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		DECLARE @DISRT  int = (SELECT BuyerID FROM web.USERS WHERE UserLogin = @login)
 		SELECT TTID as ttID , ProductID as ProdId,PayForm as Form,Price, Discount 
@@ -605,7 +605,7 @@ GO
 CREATE PROC web.get_Actions @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		SELECT T.ID as id, T.ActionType as type, T.[Action] as act,
 			T.Question as quest,T.Alternatives as ans, T.IsFixed as fix, T.multiple as mult
@@ -704,7 +704,7 @@ GO
 CREATE PROC web.get_Magazines @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		DECLARE @DISRT  int = (SELECT BuyerID FROM web.USERS WHERE UserLogin = @login)
 		SELECT  OU.ID as id, OU.CustOutletName as name,OutletAddress as addr, 
@@ -803,7 +803,7 @@ GO
 CREATE PROC web.get_MagazinesDiscounts @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		SELECT TTID ttID, PayFormID pf , Comment com, Discount disc
 			FROM  web.Discounts DI
@@ -916,7 +916,7 @@ GO
 CREATE PROC web.get_RouteActions @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		DECLARE @DISRT  int = (SELECT BuyerID FROM web.USERS WHERE UserLogin = @login)
 		SELECT  OU.RouteID rID, OU.ActionID act, OU.ID id
@@ -981,7 +981,7 @@ GO
 CREATE PROC web.get_MagazinesPayForms @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		DECLARE @DISRT  int = (SELECT BuyerID FROM web.USERS WHERE UserLogin = @login)
 		SELECT  OU.ID, CLF.PayFormID pf
@@ -1266,7 +1266,7 @@ go
 CREATE PROC web.GET_ProByTT @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		DECLARE @DISRT  int = (SELECT BuyerID FROM web.USERS WHERE UserLogin = @login)
 		SELECT  TP.TTID ttId, TP.ProdID, TP.SortOrder sort,
@@ -1296,7 +1296,7 @@ go
 CREATE PROC web.Get_TT @login varchar (30) , @pass varchar (30)
 AS 
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		SELECT  RO.ID as id, OU.Name as name,  OU.[Address] as addr,  OU.Picture as pic, 
 		OU.LG as lg, OU.ln as ln, VisitDay as visit,RO.TTID as ttid ,
@@ -1861,7 +1861,7 @@ GO
 CREATE PROC web.GET_MainPriceList @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		DECLARE @DISRT  int = (SELECT BuyerID FROM web.USERS WHERE UserLogin = @login)
 		SELECT ProductID as ProdId,PayForm as Form,Price, Discount
@@ -1911,7 +1911,7 @@ GO
 CREATE PROC web.GET_Routes @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		SELECT  RO.ID as id, VisitDay as visit,RO.TTID as ttid ,case
 																	when EXISTS (SELECT 1
@@ -1971,7 +1971,7 @@ GO
 CREATE PROC web.GET_TTPrices @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		DECLARE @DISRT  int = (SELECT BuyerID FROM web.USERS WHERE UserLogin = @login)
 		SELECT TTID as ttID , ProductID as ProdId,PayForm as Form,Price, Discount 
@@ -2077,7 +2077,7 @@ GO
 CREATE PROC web.get_Actions @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		SELECT T.ID as id, T.ActionType as type, T.[Action] as act,
 			T.Question as quest,T.Alternatives as ans, T.IsFixed as fix, T.multiple as mult
@@ -2176,7 +2176,7 @@ GO
 CREATE PROC web.get_Magazines @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		DECLARE @DISRT  int = (SELECT BuyerID FROM web.USERS WHERE UserLogin = @login)
 		SELECT  OU.ID as id, OU.CustOutletName as name,OutletAddress as addr, 
@@ -2275,7 +2275,7 @@ GO
 CREATE PROC web.get_MagazinesDiscounts @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		SELECT TTID ttID, PayFormID pf , Comment com, Discount disc
 			FROM  web.Discounts DI
@@ -2388,7 +2388,7 @@ GO
 CREATE PROC web.get_RouteActions @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		DECLARE @DISRT  int = (SELECT BuyerID FROM web.USERS WHERE UserLogin = @login)
 		SELECT  OU.RouteID rID, OU.ActionID act, OU.ID id
@@ -2453,7 +2453,7 @@ GO
 CREATE PROC web.get_MagazinesPayForms @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		DECLARE @DISRT  int = (SELECT BuyerID FROM web.USERS WHERE UserLogin = @login)
 		SELECT  OU.ID, CLF.PayFormID pf
@@ -2738,7 +2738,7 @@ go
 CREATE PROC web.GET_ProByTT @login varchar (30) , @pass varchar (30)
 AS
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		DECLARE @DISRT  int = (SELECT BuyerID FROM web.USERS WHERE UserLogin = @login)
 		SELECT  TP.TTID ttId, TP.ProdID, TP.SortOrder sort,
@@ -2768,7 +2768,7 @@ go
 CREATE PROC web.Get_TT @login varchar (30) , @pass varchar (30)
 AS 
 BEGIN
-	IF EXISTS (SELECT 1 from apk.USERS  WHERE [Login] = @login AND  apk.getPass([Password]) =@pass)
+	IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
 	BEGIN
 		SELECT  RO.ID as id, OU.Name as name,  OU.[Address] as addr,  OU.Picture as pic, 
 		OU.LG as lg, OU.ln as ln, VisitDay as visit,RO.TTID as ttid ,
@@ -2977,5 +2977,51 @@ BEGIN
 	FROM @answers
 END
 
+
+GO
+
+go
+IF NOT EXISTS ( SELECT 1
+					FROM sys.tables TA
+					WHERE SCHEMA_NAME(TA.[schema_id]) = 'web' 
+					AND TA.name = 'UserRelations')
+	BEGIN
+		CREATE TABLE web.UserRelations (
+			ID int IDENTITY PRIMARY KEY,
+			usr int,
+			chief int
+		)
+		create nonclustered index IX_UserRelations_search on web.UserRelations
+		(chief) include (usr)
+	END
+GO
+
+
+go
+IF EXISTS (SELECT 1 
+					from sys.procedures 
+					where name = 'GET_MyUsers'
+					AND  SCHEMA_NAME([schema_id]) = 'web'  )
+BEGIN
+	DROP PROCEDURE web.GET_MyUsers
+END
+
+
+GO
+CREATE PROC web.GET_MyUsers  @login varchar (100), @pass varchar (100) , @ID int
+--Declare  @login varchar (30) = 'TM_admin' , @pass varchar (30) = '2222', @ID int =2
+AS
+BEGIN
+IF EXISTS (SELECT 1 from web.USERS  WHERE UserLogin = @login AND  apk.getPass(UserPass) =@pass)
+	BEGIN
+		select ID id, UserLogin [login],apk.getPass(UserPass) pass,
+		FirstName, LastName,Email mail, IsActive act, Photo photo
+		from web.Users US
+			WHERE EXISTS  (SELECT 1
+							FROM web.UserRelations UR
+							WHERE UR.chief =@ID
+							AND US.ID = UR.usr )
+	END
+END
 
 GO

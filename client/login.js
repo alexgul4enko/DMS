@@ -1,14 +1,8 @@
 import React from 'react';
 import ReactDOM from "react-dom";
-import App from "../components/login/components/App";
+import App from "../src/login/App";
 import { Provider } from 'react-redux'
-
-
-import configureStore from "../components/login/reducer/store"
-
-
-
-// import httpGetAsync from "../components/load"
+import configureStore from "../src/login/store"
 
 
 
@@ -20,8 +14,6 @@ let initialState = {
 
 
 let store = configureStore(initialState);
-
-
 ReactDOM.render(
   <Provider store={store}>
     <App />

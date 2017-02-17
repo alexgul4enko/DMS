@@ -6,7 +6,7 @@ var rout = function (cp){
   const dbrouters = require('../routes/login')(cp);
  
   router.post('/', dbrouters.post);
-
+  router.get('/', dbrouters.get);
  
 
   return router;

@@ -19,17 +19,8 @@ module.exports =  function socketServer (server, cp) {
   socketServer.on('connection', socket => {
     const user = getCoockies(socket);
     logConnection(user);
-
     socket.emit('USER_CONECTED',user);
     actions.userStatus(cp,user, 1 );
-
-
-
-    // socket.on('message', data => {
-
-    //   socketServer.emit('message_s', data);
-    // });
-
     
 
     socket.on('GET_ORDER_BACK',data=>{
@@ -96,7 +87,7 @@ function decryptCookie(str) {
   str = str.substring(0,str.lastIndexOf("."));
   var decipher = crypto.createDecipher(OPTIONS.algorithm || defaultAlgorithm, OPTIONS.key);
   var decrypted = decipher.update(str, 'hex', 'utf8') + decipher.final('utf8');
-  return JSON.parse(decrypted)[0];
+  return JSON.parse(decrypted);
 }
 
 

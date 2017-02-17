@@ -1,0 +1,77 @@
+
+
+
+
+.fadein{
+  position: absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background: #394246;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation:fadein 1s ease;
+}
+
+
+.fadein > h1{
+  color: white;
+  position: relative;
+  font-size: 2em;
+  animation: load_text 1s cubic-bezier(1,.1,1,1);
+
+}
+
+.fadein .dogPlayGround{
+  width: 100px;
+  height: 200px;
+  padding-top: 120px;
+  animation: dog_appier 1s  cubic-bezier(1,.1,1,1) forwards;
+  opacity: 0;
+}
+
+@keyframes dog_appier{
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes load_text{
+  0%{
+    font-size: 1px;
+  }
+  100%{
+    font-size: 2em;
+  }
+}
+
+
+@keyframes fadein {
+  0% {
+    width: 0;
+    height: 0;
+    top:50%;
+    left:50%;
+  }
+  /* Adding a step in the middle */
+  
+  100% {
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+  }
+}
+
+
+
+
+
+
+

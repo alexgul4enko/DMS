@@ -1,0 +1,3 @@
+export default {
+	INIT_MYUSERS_LIST:"INIT_MYUSERS_LIST"
+}

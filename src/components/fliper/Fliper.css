@@ -1,0 +1,71 @@
+
+.flipper-container { 
+	float:left; 
+	width:100%; 
+	height:100%; 
+	margin-right:15px; 
+	display:block; 
+	perspective: 1000px;
+}
+
+.flipper-container span { 
+	color:white; 
+}
+.flipper-container >div.flipper { 
+	float:left; 
+	width:100%; 
+	height:100%; 
+	position:relative; 
+	transform-style:preserve-3d;
+}
+
+.flipper-container .front,.flipper-container .back { 
+	float:left; 
+	display:block; 
+	width:100%; 
+	height:100%; 
+	backface-visibility:hidden;
+	position:absolute; 
+	top:0; 
+	left:0; 
+	transform-style:preserve-3d;
+	transition: transform ease 500ms; 
+}
+
+
+
+
+.flipper-container.horizontal .front{
+	transform: rotateY(0deg);
+}
+.flipper-container.horizontal .back{
+	transform: rotateY(-180deg);
+}
+
+.flipper-container.horizontal  .flipper.flipped .front{
+	transform: rotateY(180deg);
+}
+.flipper-container.horizontal  .flipper.flipped .back{
+	transform: rotateY(0deg);
+}
+
+
+.flipper-container.vertical .front{
+	transform: rotateX(0deg);
+}
+.flipper-container.vertical .back{
+	transform: rotateX(-180deg);
+}
+
+.flipper-container.vertical  .flipper.flipped .front{
+	transform: rotateX(180deg);
+}
+.flipper-container.vertical  .flipper.flipped .back{
+	transform: rotateX(0deg);
+}
+
+
+
+
+			
+			

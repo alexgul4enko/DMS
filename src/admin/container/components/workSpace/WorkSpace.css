@@ -1,0 +1,45 @@
+#admin_WorkSpace{
+	position: relative;
+	background: gray;
+	width: 100%;
+	height: 100%;
+	right: 0;
+	/*transform: translateX(0px);*/
+	transition: all .5s ease;
+	overflow:hidden;
+}
+
+#admin_WorkSpace.show{
+	/*transform: translateX(100px);*/
+	width: calc(100% - 100px);
+}
+
+#admin_WorkSpace #welcomeImage{
+	width: 100%;
+	height: 100%;
+	background-image: url(/files/welcome.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+
+
+.example-enter {
+  transform: translateX(-100%);
+}
+
+.example-enter.example-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-in;
+}
+
+.example-leave {
+  transform: translateX(0);
+}
+
+.example-leave.example-leave-active {
+  transform: translateX(100%);
+  transition: transform 300ms ease-in;
+}

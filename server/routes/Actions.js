@@ -5,7 +5,7 @@ module.exports = cp=>{
   return {
     get:(req, res, next)=>{
       if(req.signedCookies && req.signedCookies.UserDao && req.signedCookies.UserDao){
-        let coockie = JSON.parse(req.signedCookies.UserDao)[0];
+        let coockie = JSON.parse(req.signedCookies.UserDao);
         let data = {login:coockie.UserLogin ,pass:coockie.pass};
         Actions.get(data,cp)
           .then(data_=>{

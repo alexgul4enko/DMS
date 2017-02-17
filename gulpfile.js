@@ -6,6 +6,12 @@ gulp.task('copCSS', function () {
 });
 
 
+gulp.task('copyHTML', function () {
+    gulp.src('./client/*.html')
+        .pipe(gulp.dest('./dist/'));
+});
+
+
 gulp.task('copfiles', function () {
     gulp.src('./client/files/*')
         .pipe(gulp.dest('./dist/files'));
@@ -17,4 +23,4 @@ gulp.task('copfonts', function () {
 });
 
 
-gulp.task('default', ['copCSS', 'copfiles', 'copfonts']);
+gulp.task('default', ['copCSS', 'copfiles','copfonts','copyHTML']);

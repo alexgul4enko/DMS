@@ -1,0 +1,3 @@
+export default {
+	INIT_USER_ROUTES:"INIT_USER_ROUTES"
+}

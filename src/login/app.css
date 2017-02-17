@@ -1,0 +1,140 @@
+
+body{
+    margin:0;
+    paddig:0;
+    background:#5c6a70;
+    font-family: 'open_sanslight';
+    
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+
+#form{
+   width:80%;
+   position: absolute;
+   top: 20%;
+   transform: translateX(-50%);
+   -moz-transform: translateX(-50%); /* Для Firefox */
+   -ms-transform: translateX(-50%); /* Для IE */
+   -webkit-transform: translateX(-50%); /* Для Safari, Chrome, iOS */
+   -o-transform: translateX(-50%); /* Для Opera */
+   left: 50%;
+   text-align: center;
+    
+}
+
+.logo{
+    width:80%;
+    max-width:300px;
+}
+
+
+
+
+
+#form input{
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    -moz-transform: translateX(-50%); /* Для Firefox */
+    -ms-transform: translateX(-50%); /* Для IE */
+    -webkit-transform: translateX(-50%); /* Для Safari, Chrome, iOS */
+    -o-transform: translateX(-50%); /* Для Opera */
+
+    background: #5c6a70;
+    background-color: #5c6a70;
+    color: white;
+    border:0;
+    font-size: 16px;
+    padding-left: 10px;
+    border-bottom: 1px solid white;
+    padding-top: 9px;
+    padding-bottom:5px;
+    margin-top:5px;
+
+}
+#form input::-webkit-input-placeholder {color:white; }
+#form input::-moz-placeholder          {color:white;}
+#form input:-moz-placeholder           {color:white; }
+#form input:-ms-input-placeholder      {color:white; }
+textarea:focus, input:focus, button:focus{
+    outline: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px #5c6a70 inset; 
+    -webkit-text-fill-color:white;
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0px  ,0 0 0 50px white inset;
+    -webkit-text-fill-color: white;
+}  
+
+#form button{
+     display: block;
+     width: 80%;
+     max-width: 300px;
+     margin-left: 50%;
+     transform: translateX(-50%);
+     margin-top: 9px;
+     border:1px solid white;
+     border-radius: 10px;
+     background: #5c6a70;
+     height:40px;
+     text-align: center;
+     cursor: pointer;
+}
+
+#form button:active{
+  background: #3a3e40;
+}
+
+#form button .loginImg{
+    height: 100%;
+}
+
+#Error{
+  color:#FADE7A;
+  margin-top:5px;
+  display:none;
+}
+#Error.Error{
+  display:block;
+}
+
+@media only screen 
+  and (min-device-width: 600px){
+      #form input{
+          font-size: 20px;
+          padding-top:10px;
+          
+      }
+
+      #form button{
+          margin-top: 10px;
+      }
+      
+  }
+
+
+@media only screen 
+  and (min-device-width: 1000px){
+      #form input{
+          font-size: 24px;
+          padding-top:20px;
+          
+      }
+
+      #form button{
+          margin-top: 20px;
+      }
+
+      #Error{
+        font-size:24px;
+      }
+      
+  }

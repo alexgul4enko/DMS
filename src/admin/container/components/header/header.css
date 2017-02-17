@@ -1,0 +1,94 @@
+.header {
+	width: calc(100% - 20px);
+	height: 40px;
+	background: #394246;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	padding: 5px 10px;
+}
+
+.header >img{
+	height: 40px;
+	cursor:pointer;
+}
+
+.header >.material-icons {
+	height: 100%;
+	line-height: 40px;
+	width: 50px;
+	font-size: 2em;
+	cursor: pointer;
+	border: 0;
+	background: transparent;
+	padding:0;
+	margin: 0;
+	color: white;
+
+}
+
+.header >.material-icons:hover{
+	font-size: 3em;
+	transition: font-size .3s ease-out ;
+}
+.header >.material-icons.show{
+	transform: rotateZ(90deg);
+	transition: transform .3s ease-out ;
+
+}
+.header >.material-icons.hide{
+	transform: rotateZ(0deg);
+	transition: transform .3s ease-out ;
+
+}
+
+
+
+.header .userData{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-content: center;
+	align-items: center;
+	margin-right: 5px;
+}
+
+.header .userData > .FIO {
+	padding: 0px 7px;
+}
+
+.header .userData .TextAvatar{
+	width:40px;
+	height:40px;
+	border-radius:40px;
+	margin:5px 0px;
+	line-height:40px;
+	background:#545967;
+	overflow: hidden;
+	font-size: 1.3em;
+	cursor: pointer;
+}
+
+.header .userData .AvatarIcon{
+	width: 40px;
+	height: 40px;
+	background: #394246;
+	text-align: center;
+	font-size: 1.5em;
+	cursor: pointer;
+	border: 2px solid white;
+
+
+}
+
+.header .userData .AvatarIcon .material-icons{
+	line-height: 40px;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	font-size: 1.5em;
+	
+
+}
+

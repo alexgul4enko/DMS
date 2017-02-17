@@ -6,7 +6,7 @@ module.exports = function(cp) {
   var me = {
     get: function(req, res, next) {
       if(req.signedCookies && req.signedCookies.UserDao && req.signedCookies.UserDao){
-        let coockie = JSON.parse(req.signedCookies.UserDao)[0];
+        let coockie = JSON.parse(req.signedCookies.UserDao);
         let data = {login:coockie.UserLogin ,pass:coockie.pass};
 
         Warehouse.exec(data,cp)

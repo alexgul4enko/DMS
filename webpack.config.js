@@ -4,12 +4,17 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StatsPlugin = require('stats-webpack-plugin');
 
 module.exports = {
+	resolve: {
+    	extensions: ['', '.js', '.jsx', '.json'],
+  	},
 	entry:{
 		 // 'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
  		//  'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
 		// "main"    : './client/index',
 		"login"   : './client/login',
-		"app" 	  : './client/app.js'
+		"app" 	  : './client/app.js',
+		"admin"   : './client/admin.js'
+
 	},
 
 	output:{
@@ -38,7 +43,7 @@ module.exports = {
 	module:{
 		loaders:[
 			{
-				test:/\.js$/,
+				test: /(\.js|\.jsx)$/,
 				loader: 'babel',
 				exclude:/node_modules/,
 				
@@ -46,7 +51,7 @@ module.exports = {
 					presets:['es2015','react','stage-0']
 				}
 			},
-
+				
 	         {
 	            test    : /(\.scss|\.css)$/,
 	            include : path.resolve(__dirname, './node_modules','react-toolbox'),
