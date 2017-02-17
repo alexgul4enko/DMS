@@ -18,5 +18,5 @@ To start the project in production mode
 
 
 <section>
-  <img src = "https://drive.google.com/file/d/0BxmZMbPKiCyiY19uRzl6TC1zVWs/view?usp=sharing"/>
+  <img src = "https://lh3.googleusercontent.com/tsrI90OJzjdmaJZ1A3X5oBxu1KVC500RmqIzvKTc6gIywrE8CMtKvRYk1h6od3A3W8r39WuNcR3-2xs=w1280-h703"/>
 </section>
